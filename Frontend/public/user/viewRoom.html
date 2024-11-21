@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Room</title>
+    <link rel="stylesheet" href="/Frontend/assets/css/user/viewRoom.css">
+</head>
+<body>
+    <header>
+        <h1>Room Details</h1>
+        <a href="../index.html">Back to Rooms</a>
+    </header>
+
+    <section id="roomDetails" class="room-details">
+        <!-- Room details will be dynamically loaded here -->
+    </section>
+
+    <section class="booking-section">
+        <label for="bookingDate">Select Date:</label>
+        <input type="date" id="bookingDate" required min="" />
+
+        <h3>Available Time Slots</h3>
+        <div id="timeSlots" class="time-slots">
+            <!-- Time slots will be dynamically generated here -->
+        </div>
+
+        <button id="confirmBooking" class="confirm-btn">Confirm Booking</button>
+    </section>
+
+    <!-- Dummy Paywall -->
+    <div id="paywall" class="paywall" style="display: none;">
+        <h3>Payment Required</h3>
+        <p>Please complete your payment to proceed with the booking.</p>
+        <button id="payNowBtn" class="pay-btn">Pay Now</button>
+    </div>
+    
+    <!-- Success Banner-->
+    <div id="successBanner" class="success-banner" style="display: none;">
+        <p>Booking confirmed successfully!</p>
+    </div>
+
+    <script src="../../js/user/viewRoom.js"></script>
+</body>
+</html>

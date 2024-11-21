@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/Frontend/assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <p>Enter your credentials for signup</p>
+        <form id="registerForm">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+        <p id="responseMessage"></p>
+    </div>
+
+    <script src="../../js/user/register.js"></script>
+</body>
+</html>

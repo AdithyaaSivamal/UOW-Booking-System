@@ -1,0 +1,44 @@
+frontend/
+├─── public/
+│    ├─── index.html
+│    ├─── login.html
+│    ├─── register.html
+│    ├─── main.html
+│    └─── admin/
+│         ├─── dashboard.html
+│         ├─── createRoom.html
+│         ├─── manageRooms.html
+│    └─── user/
+│         ├─── profile.html
+│         ├─── viewBookings.html
+│         ├─── viewRoom.html
+│
+├─── assets/
+│    ├─── css/
+│    │     ├─── global.css
+│    │     ├─── admin/
+│    │     │     ├─── dashboard.css
+│    │     │     ├─── createRoom.css
+│    │     │     ├─── manageRooms.css
+│    │     └─── user/
+│    │           ├─── profile.css
+│    │           ├─── viewBookings.css
+│    │           ├─── viewRoom.css
+│    ├─── images/
+│    └─── fonts/
+│
+├─── js/
+│    ├─── global.js
+│    ├─── admin/
+│    │     ├─── dashboard.js
+│    │     ├─── createRoom.js
+│    │     ├─── manageRooms.js
+│    └─── user/
+│          ├─── profile.js
+│          ├─── viewBookings.js
+│          ├─── viewRoom.js
+│
+└─── tests/
+     ├─── e2e/
+     ├─── unit/
+     └─── integration/

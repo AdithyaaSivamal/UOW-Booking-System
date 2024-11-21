@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #ccc;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.filters {
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+.booking-table {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead th {
+    text-align: left;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+tbody td {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+tbody tr {
+    background-color: #fff;
+}

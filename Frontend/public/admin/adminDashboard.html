@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/Frontend/assets/css/admin/adminDashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <button id="logoutButton" class="logout-btn">Logout</button>
+    </header>
+
+    <section class="dashboard-content">
+        <div class="dashboard-item" id="createRoom">
+            <h2>Create New Room</h2>
+            <p>Add a new room to the system.</p>
+            <button onclick="navigateTo('createRoom.html')">Go to Create Room</button>
+        </div>
+        <div class="dashboard-item" id="manageRooms">
+            <h2>Manage Rooms</h2>
+            <p>View and edit room data.</p>
+            <button onclick="navigateTo('manageRooms.html')">Go to Room Management</button>
+        </div>
+        <div class="dashboard-item" id="viewBookings">
+            <h2>View User Bookings</h2>
+            <p>View booking history of users.</p>
+            <button onclick="navigateTo('viewBookings.html')">Go to Bookings</button>
+        </div>
+        <!--
+        <div class="dashboard-item" id="viewProfile">
+            <h2>View Profile</h2>
+            <p>View and edit your admin profile.</p>
+            <button onclick="navigateTo('profile.html')">Go to Profile</button>
+        </div>
+        -->
+    </section>
+
+    <script src="../../js/admin/adminDashboard.js"></script>
+</body>
+</html>

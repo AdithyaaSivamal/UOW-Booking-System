@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View All Bookings</title>
+    <link rel="stylesheet" href="/Frontend/assets/css/admin/viewBookings.css">
+</head>
+<body>
+    <header>
+        <h1>All Bookings</h1>
+        <a href="../admin/adminDashboard.html">Back to Dashboard</a>
+    </header>
+
+    <section class="filters">
+        <label for="roomFilter">Filter by Room:</label>
+        <select id="roomFilter">
+            <option value="">All Rooms</option>
+            <!-- Room options will be populated dynamically -->
+        </select>
+
+        <label for="dateFilter">Filter by Date:</label>
+        <input type="date" id="dateFilter">
+        <button id="filterBtn">Apply Filters</button>
+        <button id="viewAllBtn">View All Bookings</button>
+    </section>
+
+    <section class="booking-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Booking Ref</th>
+                    <th>User</th>
+                    <th>Room</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="bookingList">
+                <!-- Booking records will be dynamically loaded here -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="../../js/admin/viewBookings.js"></script>
+</body>
+</html>

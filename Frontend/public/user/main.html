@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Rooms</title>
+    <link rel="stylesheet" href="/Frontend/assets/css/user/main.css">
+</head>
+<body>
+    <header>
+        <h1>Study Rooms</h1>
+        <div class="header-controls">
+            <span id="authLinks">
+                <a href="login.html" id="loginLink">Log in</a> | 
+                <a href="register.html" id="signupLink">Sign Up</a>
+            </span>
+            <span id="userControls" style="display: none;">
+                <a href="./profile.html" id="profileLink">Profile</a> | 
+                <a href="#" id="logoutLink">Sign Out</a>
+            </span>
+        </div>
+    </header>
+
+    <section class="filters">
+        <input type="date" id="datePicker">
+        <button class="filter-btn active" data-availability="all">All</button>
+        <button class="filter-btn" data-availability="available">Available</button>
+        <select id="locationFilter">
+            <option value="">Filter by: Location</option>
+            <!-- Additional options can be dynamically added if necessary -->
+        </select>
+    </section>
+
+    <section id="roomList" class="room-list">
+        <!-- Rooms will be dynamically loaded here -->
+    </section>
+    
+    <!-- Popup Modal for Unauthorized Access -->
+    <div id="loginPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <p>You must log in to book a room.</p>
+            <button id="goToLogin">Log In</button>
+            <button id="closePopup">Cancel</button>
+        </div>
+    </div>
+
+    <script src="../../js/user/main.js"></script>
+</body>
+</html>

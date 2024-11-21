@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Room</title>
+    <link rel="stylesheet" href="/Frontend/assets/css/user/createRoom.css">
+</head>
+<body>
+    <header>
+        <h1>Create Room</h1>
+    </header>
+
+    <section class="form-container">
+        <form id="createRoomForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="roomName">Room name:</label>
+                <input type="text" id="roomName" name="roomName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="capacity">Capacity:</label>
+                <input type="number" id="capacity" name="capacity" required min="1">
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required min="0" step="0.01">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="imageFile">Upload Image:</label>
+                <input type="file" id="imageFile" name="image" accept="image/*">
+            </div>
+
+            <button type="submit" class="create-btn">CREATE</button>
+        </form>
+    </section>
+
+    <div id="successBanner" class="success-banner" style="display: none;">
+        <p>Room created successfully! <a href="../admin/manageRooms.html">View in Manage Rooms</a></p>
+    </div>
+
+    <script src="../../js/admin/createRoom.js"></script>
+</body>
+</html>
