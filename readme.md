@@ -1,71 +1,148 @@
-Frontend
-- By default, rooms are displayed in a calendar
-- Available rooms are displayed in a list
-- User can filter rooms by time, date, location, availability
-- User can book a room
 
-Backend
-- DB: Mongo or SQL
-- Live server: Node, Express, Axios, etc
-- User Actions (Standard API calls)
+# **University Booking System - Secure Room Reservation Platform**
 
---------------------------------------------------
+A secure, full-stack booking system designed for managing room reservations. Built using **Node.js**, **Express**, **MongoDB**, and vanilla **HTML**, **CSS**, and **JavaScript**. This project was developed as a learning exercise to implement **secure development practices** and explore compliance with industry standards.
 
-Program Features
-- DB store booking information: Time, Date, Location, Availability
-- Cross-validation loginr requests with UOW API
-- Store user booking history
+Key features include:
+- **Role-Based Access Control (RBAC)**
+- **JWT-based Authentication**
+- **Input Validation and Output Encoding**
+- **Compliance with OWASP Top 10 Guidelines**
+- **Security Documentation and Testing**: Includes tools like **OWASP ZAP** and **BDD-Security**, and adherence to **ISO/IEC 27001** compliance.
+- Comprehensive security testing and policies, along with risk assessment and mitigation strategies.
 
+---
 
-User Actions:
- - Users login with UOW ID and/or email
- - Scroll through rooms
- - Filters: Time, Date, Location, availability
- - Book a room
- - Cancel a booking
- - View booking history
- 
-Updates:
-- Super-user/Admin
-    - create accounts
-    - manage accouts
-    - view last login/logout
+## **Table of Contents**
+1. [Features](#features)
+2. [Architecture](#architecture)
+3. [Security Practices](#security-practices)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [Documentation](#documentation)
+7. [Testing and Validation](#testing-and-validation)
+8. [Future Enhancements](#future-enhancements)
+9. [Contributing](#contributing)
+10. [License](#license)
 
--sysadmin
-    - approve newly created rooms
-    - view currnet status of a room(pending approval, approval, rejected, restore)
-    - view who booked a room by date
-    
+---
 
+## **Features**
+- **Secure Authentication and Authorization**:
+  - Passwords stored as salted hashes using `bcrypt`.
+  - Role-based access control for users and admins.
+  - JWT tokens for session management.
+- **Robust Input Validation**:
+  - Backend input validation to prevent injection attacks.
+  - Adherence to OWASP best practices for user input sanitization.
+- **Comprehensive Documentation**:
+  - Threat Model Document (STRIDE-based threat identification and mitigation).
+  - Risk Assessment and Mitigation Plan.
+  - Application Security for OSI Layers.
+  - Incident Response Plan.
+- **Automated Security Testing**:
+  - Integrated with tools like **OWASP ZAP** and **BDD-Security** for testing vulnerabilities.
+- **Responsive Frontend**:
+  - Built with vanilla HTML, CSS, and JavaScript.
+  - Mobile-friendly and user-friendly interfaces.
 
+---
 
-- .env raw content
----------------------------------------------------------
-PORT=5000
-MONGO_URI=mongodb+srv://asivamal:Adipers0n@cluster0.bxbhflt.mongodb.net/UOW_Booking_System?retryWrites=true&w=majority&appName=Cluster0
-JWT_SECRET='YvLo5ufpClFGvWIvDjQ+tPNEI2VyLs6xCQn0zbuGeBKCbjHpatNT0FPIfhCprFKh0/rTfGVMTckH9N6KWy1jsg=='
+## **Architecture**
+The system follows a **client-server architecture** with the following components:
+- **Frontend**: User interface developed with HTML, CSS, and JavaScript.
+- **Backend**: Node.js and Express handle API requests and business logic.
+- **Database**: MongoDB for storing user accounts, room details, and booking information.
+- **Security Layer**: Integrated with JWT, role-based access control, and secure coding practices.
 
-----------------------------------------------------------
+Refer to the **[System Overview and Architecture](docs/System_Overview_Architecture.pdf)** document for detailed diagrams and explanations.
 
+---
 
-- ./config/db.js raw content
-----------------------------------------------------------
-// config/db.js
+## **Security Practices**
+This project focuses on **secure development** and includes:
+1. **Authentication and Authorization**:
+   - Password hashing using `bcrypt`.
+   - JWT for stateless authentication.
+   - Role-based access control.
+2. **Input Validation and Output Encoding**:
+   - Validation of all user inputs to prevent common attacks (e.g., SQL Injection, XSS).
+3. **Secure Data Transmission**:
+   - Use of HTTPS (recommended for deployment) and CORS policies.
+4. **Error Handling and Logging**:
+   - Proper error messages to avoid information disclosure.
+   - Logging mechanisms for audit and troubleshooting.
+5. **Compliance Considerations**:
+   - Adherence to **OWASP Top 10** and ISO/IEC 27001 Annex A controls.
 
-const mongoose = require('mongoose');
+---
 
-const connectDB = async () => {
-  try {
-    const conn = await mongoose.connect(process.env.MONGO_URI, {
-      // Additional options can be added here
-    });
-    console.log(`MongoDB Connected: ${conn.connection.host}`);
-  } catch (err) {
-    console.error(`Database connection error: ${err.message}`);
-    process.exit(1);
-  }
-};
+## **Installation**
+### **Requirements**
+- Node.js and npm
+- MongoDB instance (local or cloud-based)
+- Git
 
-module.exports = connectDB;
+### **Steps**
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:AdithyaaSivamal/UOW-Booking-System.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd UOW-Booking-System
+   ```
+3. Set up the backend:
+   ```bash
+   cd backend
+   npm install
+   cp .env.example .env  # Configure environment variables
+   npm start
+   ```
+4. Set up the frontend:
+   ```bash
+   cd ../frontend
+   npm install
+   npm start
+   ```
 
-----------------------------------------------------------
+---
+
+## **Usage**
+1. **Admin Dashboard**:
+   - Login as an admin to manage rooms and bookings.
+2. **User Features**:
+   - Register, login, and book available rooms.
+   - View and cancel existing bookings.
+
+For detailed instructions, refer to the **[User Guide](docs/User_Guide.pdf)**.
+
+---
+
+## **Documentation**
+The project includes comprehensive documentation:
+1. **[System Overview and Architecture](docs/System_Overview_Architecture.pdf)**
+2. **[Threat Model Document](docs/Threat_Model.pdf)**
+3. **[Risk Assessment and Mitigation Plan](docs/Risk_Assessment.pdf)**
+4. **[Security Policies](docs/Security_Policies.pdf)**
+5. **[Application Security Testing and Validation](docs/Security_Testing.pdf)**
+
+---
+
+## **Testing and Validation**
+### **Tools Used**:
+- **OWASP ZAP**: Automated security testing for APIs and web pages.
+- **BDD-Security**: Behavior-driven security testing.
+- **npm audit**: Dependency vulnerability checks.
+
+Refer to the **[Security Testing and Validation Document](docs/Security_Testing.pdf)** for more details.
+
+---
+
+## **Future Enhancements**
+- **Add Logging Mechanisms**: Implement centralized logging for monitoring and troubleshooting.
+- **Deployment**: Host the system on a secure cloud platform with HTTPS.
+- **Enhanced Security Features**: Include anti-CSRF tokens and advanced rate-limiting mechanisms.
+
+---
+
