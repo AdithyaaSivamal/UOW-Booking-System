@@ -115,7 +115,6 @@ This project focuses on **secure development** and includes:
    - Register, login, and book available rooms.
    - View and cancel existing bookings.
 
-For detailed instructions, refer to the **[User Guide](docs/User_Guide.pdf)**.
 
 ---
 
