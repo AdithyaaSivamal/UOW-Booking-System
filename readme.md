@@ -134,7 +134,7 @@ The project includes comprehensive documentation:
 - **BDD-Security**: Behavior-driven security testing.
 - **npm audit**: Dependency vulnerability checks.
 
-Refer to the **[Security Testing and Validation Document](docs/Security_Testing.pdf)** for more details.
+Refer to the **[Security Testing and Validation Document](docs/Security_Testing_Report_and_Validation.pdf)** for more details.
 
 ---
 
