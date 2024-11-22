@@ -122,10 +122,11 @@ For detailed instructions, refer to the **[User Guide](docs/User_Guide.pdf)**.
 ## **Documentation**
 The project includes comprehensive documentation:
 1. **[System Overview and Architecture](docs/System_Overview_Architecture.pdf)**
-2. **[Threat Model Document](docs/Threat_Model.pdf)**
-3. **[Risk Assessment and Mitigation Plan](docs/Risk_Assessment.pdf)**
-4. **[Security Policies](docs/Security_Policies.pdf)**
-5. **[Application Security Testing and Validation](docs/Security_Testing.pdf)**
+2. **[Threat Model Document](docs/Threat_Model_and_Risk_Assessment.pdf)**
+3. **[Risk Assessment and Mitigation Plan](docs/Risk_Assessment_and_Mitigation_Plan.pdf)**
+4. **[Security Policies](docs/Security_Policies_and_Guidelines.pdf)**
+5. **[Application Security Testing and Validation](docs/Security_Testing_Report_and_Validation.pdf)**
+6. 
 
 ---
 
