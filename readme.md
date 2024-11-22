@@ -125,8 +125,7 @@ The project includes comprehensive documentation:
 2. **[Threat Model Document](docs/Threat_Model_and_Risk_Assessment.pdf)**
 3. **[Risk Assessment and Mitigation Plan](docs/Risk_Assessment_and_Mitigation_Plan.pdf)**
 4. **[Security Policies](docs/Security_Policies_and_Guidelines.pdf)**
-5. **[Application Security Testing and Validation](docs/Security_Testing_Report_and_Validation.pdf)**
-6. 
+5. **[Application Security Testing and Validation](docs/Security_Testing_Report_and_Validation.pdf)** 
 
 ---
 
