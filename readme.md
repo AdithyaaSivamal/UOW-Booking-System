@@ -138,10 +138,3 @@ Refer to the **[Security Testing and Validation Document](docs/Security_Testing.
 
 ---
 
-## **Future Enhancements**
-- **Add Logging Mechanisms**: Implement centralized logging for monitoring and troubleshooting.
-- **Deployment**: Host the system on a secure cloud platform with HTTPS.
-- **Enhanced Security Features**: Include anti-CSRF tokens and advanced rate-limiting mechanisms.
-
----
-
